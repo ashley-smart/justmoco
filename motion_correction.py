@@ -30,8 +30,13 @@ metadata = registration.get_bruker_metadata(metadata_path)
 print('Loaded metadata from {}'.format(metadata_path))
 
 # Load brain images
-ch1_brain_path = os.path.join(file_base_path, 'ch1_stitched.nii')
-ch2_brain_path = os.path.join(file_base_path, 'ch2_stitched.nii')
+# ch1_brain_path = os.path.join(file_base_path, 'ch1_stitched.nii')
+# ch2_brain_path = os.path.join(file_base_path, 'ch2_stitched.nii')
+
+#for anat file test
+ch1_brain_path = os.path.join(file_base_path, last_dir + '_channel_1_s0.nii')
+ch2_brain_path = os.path.join(file_base_path, last_dir + '_channe2_1_s0.nii')
+
 ch1 = registration.get_ants_brain(ch1_brain_path, metadata, channel=0)
 print('Loaded {}, shape={}'.format(ch1_brain_path, ch1.shape))
 ch2 = registration.get_ants_brain(ch2_brain_path, metadata, channel=0)
