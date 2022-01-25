@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #SBATCH --mail-type=END,FAIL
-#SBATCH --job-name=moco_tac
+#SBATCH --job-name=moco_ash
 #SBATCH --partition=trc
 #SBATCH --time=96:00:00
 #SBATCH --ntasks=1
