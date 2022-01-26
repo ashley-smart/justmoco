@@ -61,7 +61,7 @@ def get_bruker_metadata(file_path):
 
     elif root.find('Sequence').get('type') == 'TSeries ZSeries Element': # Volume time series
         middle_frame = int(len(root.find('Sequence').findall('Frame')) / 2)
-        frame_times = [float(seq.findall('Frame')[middle_frame].get('relativeTime')) for seq in root.findall('Sequence') if len(seq) == len(root.findall('Sequence')[0]] 
+        frame_times = [float(seq.findall('Frame')[middle_frame].get('relativeTime')) for seq in root.findall('Sequence') if len(seq) == len(root.findall('Sequence')[0])]
         #adding len(seq) above to check that it is a full sequence of the same length as the first sequence
         metadata['frame_times'] = frame_times
         metadata['sample_period'] = np.mean(np.diff(frame_times))
