@@ -5,7 +5,8 @@
 #SBATCH --partition=trc
 #SBATCH --time=96:00:00
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=8
+#SBATCH --mem-per-cpu=8G
+#SBATCH --cpus-per-task=10
 #SBATCH --output=/home/users/asmart/projects/justmoco/logs/%x.%j.out
 #SBATCH --open-mode=append
 
