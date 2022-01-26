@@ -8,6 +8,7 @@ import sys
 import time
 import nibabel as nib
 import numpy as np
+import xml.etree.ElementTree as ET
 from visanalysis.util import registration
 
 t0 = time.time()
